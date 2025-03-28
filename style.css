@@ -1,143 +1,143 @@
 body {
-    font-family: sans-serif;
-    background-color: #f8f9fa;
-    color: #202122;
-    margin: 0;
-    padding: 0;
+  font-family: sans-serif;
+  background-color: #f8f9fa;
+  color: #202122;
+  margin: 0;
+  padding: 0;
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ffffff;
-    padding: 10px 20px;
-    border-bottom: 1px solid #a2a9b1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  border-bottom: 1px solid #a2a9b1;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .logo img {
-    height: 40px;
+  height: 40px;
 }
 
 .wiki-text {
-    font-size: 30px;
-    font-family: "Linux Libertine", Georgia, serif;
-    color: #000;
-    margin-left: 10px;
+  font-size: 30px;
+  font-family: "Linux Libertine", Georgia, serif;
+  color: #000;
+  margin-left: 10px;
 }
 
 .search {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .search input {
-    padding: 5px;
-    font-size: 14px;
-    width: 200px;
+  padding: 5px;
+  font-size: 14px;
+  width: 200px;
 }
 
 .search button {
-    padding: 5px 10px;
-    border: none;
-    background-color: #36c;
-    color: white;
-    cursor: pointer;
+  padding: 5px 10px;
+  border: none;
+  background-color: #36c;
+  color: white;
+  cursor: pointer;
 }
 
 main {
-    display: flex;
-    max-width: 1200px;
-    margin: 20px auto;
+  display: flex;
+  max-width: 1200px;
+  margin: 20px auto;
 }
 
 .sidebar {
-    width: 250px;
-    padding: 10px;
-    background-color: #f8f9fa;
+  width: 250px;
+  padding: 10px;
+  background-color: #f8f9fa;
 }
 
 .sidebar ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .sidebar ul li {
-    margin: 10px 0;
+  margin: 10px 0;
 }
 
 .sidebar ul li a {
-    text-decoration: none;
-    color: #36c;
+  text-decoration: none;
+  color: #36c;
 }
 
 article {
-    flex: 1;
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    font-size: 28px;
-    border-bottom: 1px solid #a2a9b1;
-    padding-bottom: 5px;
+  font-size: 28px;
+  border-bottom: 1px solid #a2a9b1;
+  padding-bottom: 5px;
 }
 
 h2 {
-    font-size: 22px;
-    border-bottom: 1px solid #a2a9b1;
-    padding-bottom: 5px;
+  font-size: 22px;
+  border-bottom: 1px solid #a2a9b1;
+  padding-bottom: 5px;
 }
 
 ul, ol {
-    padding-left: 20px;
+  padding-left: 20px;
 }
 
 footer {
-    text-align: center;
-    font-size: 14px;
-    padding: 10px;
-    background-color: #f8f9fa;
-    border-top: 1px solid #a2a9b1;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-top: 1px solid #a2a9b1;
 }
 
 /* ====== Dostosowanie dla urządzeń mobilnych ====== */
 @media screen and (max-width: 768px) {
-    main {
-        flex-direction: column;
-        padding: 10px;
-    }
+  main {
+    flex-direction: column;
+    padding: 10px;
+  }
 
-    .sidebar {
-        width: 100%;
-        padding: 0;
-        background-color: transparent;
-        text-align: center;
-    }
+  .sidebar {
+    width: 100%;
+    padding: 0;
+    background-color: transparent;
+    text-align: center;
+  }
 
-    .sidebar ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 10px;
-    }
+  .sidebar ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+  }
 
-    .sidebar ul li {
-        margin: 5px 10px;
-    }
+  .sidebar ul li {
+    margin: 5px 10px;
+  }
 
-    article {
-        padding: 15px;
-    }
+  article {
+    padding: 15px;
+  }
 
-    .search input {
-        width: 100%;
-    }
+  .search input {
+    width: 100%;
+  }
 }
