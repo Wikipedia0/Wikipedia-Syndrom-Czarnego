@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: sans-serif;
     background-color: #f8f9fa;
     color: #202122;
     margin: 0;
@@ -15,8 +15,20 @@ header {
     border-bottom: 1px solid #a2a9b1;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+}
+
 .logo img {
     height: 40px;
+}
+
+.wiki-text {
+    font-size: 30px;
+    font-family: "Linux Libertine", Georgia, serif;
+    color: #000;
+    margin-left: 10px;
 }
 
 .search {
