@@ -31,9 +31,13 @@ header {
   margin-left: 10px;
 }
 
-.search {
-  display: flex;
-  align-items: center;
+#toggle-theme {
+  background-color: #36c;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 .search input {
@@ -82,6 +86,7 @@ article {
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 h1 {
@@ -90,22 +95,40 @@ h1 {
   padding-bottom: 5px;
 }
 
-h2 {
-  font-size: 22px;
-  border-bottom: 1px solid #a2a9b1;
-  padding-bottom: 5px;
-}
-
-ul, ol {
-  padding-left: 20px;
-}
-
-footer {
+.image-box {
+  float: right;
+  width: 220px;
   text-align: center;
-  font-size: 14px;
-  padding: 10px;
-  background-color: #f8f9fa;
-  border-top: 1px solid #a2a9b1;
+  margin: 10px;
+}
+
+.image-box img {
+  max-width: 100%;
+  border: 1px solid #a2a9b1;
+}
+
+.caption {
+  font-size: 12px;
+  color: gray;
+}
+
+/* ====== Tryb ciemny ====== */
+.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.dark-mode header {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+.dark-mode article {
+  background-color: #292929;
+}
+
+.dark-mode #toggle-theme {
+  background-color: #ff9800;
 }
 
 /* ====== Dostosowanie dla urządzeń mobilnych ====== */
@@ -129,15 +152,9 @@ footer {
     padding: 10px;
   }
 
-  .sidebar ul li {
-    margin: 5px 10px;
-  }
-
-  article {
-    padding: 15px;
-  }
-
-  .search input {
+  .image-box {
+    float: none;
     width: 100%;
+    margin: 0 auto;
   }
 }
