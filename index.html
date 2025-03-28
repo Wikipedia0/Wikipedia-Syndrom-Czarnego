@@ -1,70 +1,88 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wikipedia</title>
-    <link rel="stylesheet" href="style.css">
-
-    <!-- 🔹 Ikona "W" Wikipedii w tytule strony -->
-    <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/6/60/Wikipedia-logo.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wikipedia</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Favicon – ikona "W" Wikipedii -->
+  <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/6/60/Wikipedia-logo.png">
 </head>
 <body>
 
-<header>
+  <header>
     <div class="logo">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Wikipedia-logo.png" alt="Wikipedia Logo">
-        <span class="wiki-text">Wikipedia</span>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Wikipedia-logo.png" alt="Wikipedia Logo">
+      <span class="wiki-text">Wikipedia</span>
     </div>
     <div class="search">
-        <form id="searchForm">
-            <input type="text" id="searchInput" placeholder="Szukaj w Wikipedii">
-            <button type="submit">🔍</button>
-        </form>
+      <form id="searchForm">
+        <input type="text" id="searchInput" placeholder="Szukaj w Wikipedii">
+        <button type="submit">🔍</button>
+      </form>
     </div>
-</header>
+  </header>
 
-<main>
+  <main>
     <aside class="sidebar">
-        <ul>
-            <li><a href="#">Strona główna</a></li>
-            <li><a href="#">Losowy artykuł</a></li>
-            <li><a href="#">Kategorie</a></li>
-            <li><a href="#">Pomoc</a></li>
-        </ul>
+      <ul>
+        <li><a href="#">Strona główna</a></li>
+        <li><a href="#">Losowy artykuł</a></li>
+        <li><a href="#">Kategorie</a></li>
+        <li><a href="#">Pomoc</a></li>
+      </ul>
     </aside>
 
     <article>
-        <h1>Syndrom Czarnego</h1>
-        <p><strong>Syndrom Czarnego</strong> to termin opisujący osoby, które nie potrafią przyznać się do błędu, a jednocześnie wykazują zachowania dziecinne i niedojrzałe.</p>
-        
-        <h2>Objawy</h2>
-        <ul>
-            <li>Nieprzyjmowanie krytyki</li>
-            <li>Upór w obronie błędnych przekonań</li>
-            <li>Agresywne reagowanie na niezgodę</li>
-            <li>Ignorowanie faktów</li>
-        </ul>
+      <h1>Syndrom Czarnego</h1>
+      <p>
+        <strong>Syndrom Czarnego</strong> to termin opisujący postawę charakteryzującą się niezdolnością do przyznania się do własnych błędów oraz skrajną dziecinną i niedojrzałą reakcją emocjonalną.
+      </p>
+      <p>
+        Osoby dotknięte tym syndromem nie tylko odmawiają przyznania się do własnych pomyłek, ale także nadmiernie zrzucają odpowiedzialność za swoje działania na czynniki zewnętrzne – mogą tłumaczyć się przyjmowaniem leków, obwiniać inne osoby lub wskazywać na niezależne czynniki trzecie. Dodatkowo, często przejawiają skrajną hipokryzję, krytykując innych za te same błędy, których sami nie potrafią zaakceptować.
+      </p>
 
-        <h2>Możliwe przyczyny</h2>
-        <p>Syndrom ten może wynikać z cech osobowości, środowiska wychowawczego lub braku umiejętności emocjonalnych.</p>
+      <h2>Objawy</h2>
+      <ul>
+        <li>Brak przyjmowania krytyki oraz odmowa przyznania się do błędu.</li>
+        <li>Nadmierne zrzucanie odpowiedzialności – obwinianie leków, innych osób lub czynników zewnętrznych.</li>
+        <li>Skrajna hipokryzja – krytykowanie innych za to, czego sami nie potrafią zaakceptować.</li>
+        <li>Dziecinne i impulsywne reakcje emocjonalne.</li>
+      </ul>
+
+      <h2>Przyczyny i rozwój syndromu</h2>
+      <p>
+        Syndrom może mieć podłoże w wczesnym wychowaniu, gdzie brak konsekwencji lub nadmierna ochrona utrudniają rozwój umiejętności przyjmowania odpowiedzialności. Niskie poczucie własnej wartości, strach przed utratą aprobaty społecznej oraz skłonność do przerzucania winy na zewnętrzne czynniki również mogą odgrywać istotną rolę w rozwoju tego zjawiska.
+      </p>
+
+      <h2>Konsekwencje</h2>
+      <ul>
+        <li>Trudności w relacjach interpersonalnych – konfliktowe zachowania i brak umiejętności przyjmowania konstruktywnej krytyki.</li>
+        <li>Problemy zawodowe – brak zdolności do rozwoju i adaptacji, gdyż każdy błąd jest bagatelizowany lub zrzucany na innych.</li>
+        <li>Izolacja społeczna – utrata zaufania oraz zwiększone napięcia w środowiskach, gdzie wymagana jest odpowiedzialność za działania.</li>
+      </ul>
+
+      <h2>Metody przezwyciężania</h2>
+      <p>
+        Chociaż syndrom nie jest oficjalną jednostką chorobową w psychologii, osoby dotknięte tym zjawiskiem mogą korzystać z psychoterapii, która pomoże im rozwijać umiejętność samorefleksji i przyjmowania konstruktywnej krytyki. Kluczowe znaczenie ma także świadoma praca nad samooceną i uczenie się odpowiedzialności za własne decyzje.
+      </p>
     </article>
-</main>
+  </main>
 
-<footer>
+  <footer>
     <p>Wikipedia — wolna encyklopedia</p>
-</footer>
+  </footer>
 
-<script>
+  <script>
     document.getElementById("searchForm").addEventListener("submit", function(event) {
-        event.preventDefault();
-        let query = document.getElementById("searchInput").value;
-        if (query) {
-            let wikiUrl = "https://pl.wikipedia.org/wiki/Special:Search?search=" + encodeURIComponent(query);
-            window.location.href = wikiUrl;
-        }
+      event.preventDefault();
+      let query = document.getElementById("searchInput").value;
+      if (query) {
+        let wikiUrl = "https://pl.wikipedia.org/wiki/Special:Search?search=" + encodeURIComponent(query);
+        window.location.href = wikiUrl;
+      }
     });
-</script>
+  </script>
 
 </body>
 </html>
