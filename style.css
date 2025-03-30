@@ -1,18 +1,32 @@
+/* Podstawowe style Wikipedii */
 body {
-  font-family: sans-serif;
-  background-color: #f8f9fa;
-  color: #202122;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #000000;
   margin: 0;
   padding: 0;
+  transition: background-color 0.3s, color 0.3s;
 }
 
+/* Tryb ciemny */
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+/* Nagłówek */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ffffff;
+  background-color: #f8f9fa;
   padding: 10px 20px;
-  border-bottom: 1px solid #a2a9b1;
+  border-bottom: 1px solid #ddd;
+}
+
+body.dark-mode header {
+  background-color: #2c2c2c;
+  border-bottom: 1px solid #444;
 }
 
 .logo {
@@ -22,48 +36,33 @@ header {
 
 .logo img {
   height: 40px;
+  margin-right: 10px;
 }
 
 .wiki-text {
-  font-size: 30px;
-  font-family: "Linux Libertine", Georgia, serif;
-  color: #000;
-  margin-left: 10px;
+  font-size: 22px;
+  font-weight: bold;
 }
 
+/* Przycisk trybu ciemnego */
 #toggle-theme {
-  background-color: #36c;
-  color: white;
-  border: none;
-  padding: 8px 15px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.search input {
-  padding: 5px;
-  font-size: 14px;
-  width: 200px;
-}
-
-.search button {
+  background: none;
+  border: 1px solid #000;
   padding: 5px 10px;
-  border: none;
-  background-color: #36c;
-  color: white;
   cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
 }
 
-main {
-  display: flex;
-  max-width: 1200px;
-  margin: 20px auto;
+body.dark-mode #toggle-theme {
+  border: 1px solid #fff;
 }
 
+/* Pasek boczny */
 .sidebar {
-  width: 250px;
-  padding: 10px;
-  background-color: #f8f9fa;
+  width: 200px;
+  float: left;
+  padding: 20px;
 }
 
 .sidebar ul {
@@ -71,90 +70,58 @@ main {
   padding: 0;
 }
 
-.sidebar ul li {
-  margin: 10px 0;
+.sidebar li {
+  margin-bottom: 10px;
 }
 
-.sidebar ul li a {
+.sidebar a {
   text-decoration: none;
-  color: #36c;
+  color: #0645ad;
 }
 
+body.dark-mode .sidebar a {
+  color: #88c0d0;
+}
+
+/* Artykuł */
 article {
-  flex: 1;
-  background-color: white;
+  margin-left: 220px;
   padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  position: relative;
+  max-width: 800px;
 }
 
-h1 {
-  font-size: 28px;
-  border-bottom: 1px solid #a2a9b1;
+h1, h2 {
+  border-bottom: 1px solid #ddd;
   padding-bottom: 5px;
 }
 
-.image-box {
-  float: right;
-  width: 220px;
+body.dark-mode h1, body.dark-mode h2 {
+  border-bottom: 1px solid #444;
+}
+
+/* Stopka */
+footer {
   text-align: center;
-  margin: 10px;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-top: 1px solid #ddd;
 }
 
-.image-box img {
-  max-width: 100%;
-  border: 1px solid #a2a9b1;
+body.dark-mode footer {
+  background-color: #2c2c2c;
+  border-top: 1px solid #444;
 }
 
-.caption {
-  font-size: 12px;
-  color: gray;
-}
-
-/* ====== Tryb ciemny ====== */
-.dark-mode {
-  background-color: #121212;
-  color: #e0e0e0;
-}
-
-.dark-mode header {
-  background-color: #1e1e1e;
-  color: #fff;
-}
-
-.dark-mode article {
-  background-color: #292929;
-}
-
-.dark-mode #toggle-theme {
-  background-color: #ff9800;
-}
-
-/* ====== Dostosowanie dla urządzeń mobilnych ====== */
-@media screen and (max-width: 768px) {
-  main {
-    flex-direction: column;
-    padding: 10px;
-  }
-
+/* Responsywność */
+@media (max-width: 768px) {
   .sidebar {
-    width: 100%;
-    padding: 0;
-    background-color: transparent;
-    text-align: center;
+    display: none;
   }
-
-  .sidebar ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 10px;
+  article {
+    margin-left: 0;
   }
-
-  .image-box {
-    float: none;
-    width: 100%;
-    margin: 0 auto;
+  header {
+    flex-direction: column;
+    align-items: center;
   }
 }
